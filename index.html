@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halloween Party</title>
+    <link href="https://fonts.googleapis.com/css?family=Eater&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Piedra&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/icon2.png">
+    <!--este diseño no vale para otros dispositivos-->
+    <style>
+        @font-face {
+            font-family: halloween;
+            src: url('fuentes/plasma-drip/plasdrip.ttf');
+        }
+        #wrapper {
+            position: relative; /*el wrapper se mueve para centrarse*/
+            background-image: url("imagenes/fondo3.jpg");
+            width: 1332px;
+            height: 850px;
+            margin:auto;
+            border-radius: 100px;
+            
+        }
+        body{background-color: #000000;}
+        h1{position: absolute;/* lo que va dentro se mueve con el*/
+            font-family: halloween, cursive;color:#8E151E;
+            font-size: 8vh;
+            left: 20px;
+            top: 680px;
+
+        }
+        #p1{color: #8E151E;
+            position: absolute;
+            top: 650px;
+            font-size: 3vh;
+            left: 20px;
+            font-family: 'Piedra', cursive
+            }
+        #card1{position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 160px;
+            left: 650px;
+            
+    
+        }
+
+        #card2{position: absolute;
+        width: 155px;
+        height: 127px;
+        top:340px;
+        left:430px;
+        
+        }
+
+        #card3{position:absolute;
+            width: 193px;
+            height: 139px;
+            top:400px;
+            left:100px;
+            
+            
+            }
+    
+        #murci{position: absolute;
+        top:160px;
+        left:1100px;
+        visibility: hidden;
+        }
+
+        #susto{position: absolute;
+        visibility: hidden;
+        }
+
+        #mayas{position: absolute;
+        top:510px;
+        left: 1080px;
+        visibility: hidden;}
+
+        #freddy{position: absolute;
+        top:600px;
+        left: 100px ;
+        visibility: hidden;}
+
+
+    
+    </style>
+    <script>
+        function mostrar(id){
+            document.getElementById(id).style.visibility="visible"
+            }
+        function ocultar(id){
+            document.getElementById(id).style.visibility="hidden"
+            }
+        function sonar(id){
+            document.getElementById(id).play();
+        }
+        function parar(id){
+            document.getElementById(id).pause();
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <audio id="demon">
+        <source src="sonidos/michael_myers_dbd.mp3" type="audio/mpeg">
+            
+    </audio>
+
+
+    <div id="wrapper">
+        <h1>Halloween Party...</h1>
+        <p id="p1"> Don't click on the knife!!...</p>
+        <div id="card1" onmouseover="mostrar('murci')" onmouseout="ocultar('murci')"></div>
+        <div id="card2" onclick="mostrar('susto');"></div>
+        <div id="card3" onclick="mostrar('mayas');sonar('demon')"></div>
+        
+        <img id="murci" src="imagenes/murci.gif">
+        <img id="susto" src="imagenes/susto.gif" onclick="ocultar('susto')" height="1200">
+        <img id="mayas" src="imagenes/mayas.gif" onclick="ocultar('mayas')">
+        <img id="freddy" src="imagenes/freddy.gif" onclick="ocultar('freddy')">
+ 
+
+
+    </div>
+    
+</body>
+</html>
