@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halloween Party</title>
-    <link href="https://fonts.googleapis.com/css?family=Eater&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Piedra&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="imagenes/icon2.png">
     <!--este diseño no vale para otros dispositivos-->
@@ -13,6 +12,10 @@
         @font-face {
             font-family: halloween;
             src: url('fuentes/plasma-drip/plasdrip.ttf');
+        }
+        @font-face {
+            font-family: covid;
+            src: url('fuentes/aurach/Aurach\ Bi.ttf');
         }
         #wrapper {
             position: relative; /*el wrapper se mueve para centrarse*/
@@ -79,10 +82,14 @@
         left: 1080px;
         visibility: hidden;}
 
-        #freddy{position: absolute;
-        top:600px;
-        left: 100px ;
-        visibility: hidden;}
+        #covid{position: absolute;
+        top:100px;
+        left: 400px ;
+        visibility: hidden; 
+        color: green;
+        font-size: 10vh;
+        font-family: covid;        
+        }
 
 
     
@@ -114,14 +121,14 @@
     <div id="wrapper">
         <h1>Halloween Party...</h1>
         <p id="p1"> Don't click on the knife!!...</p>
-        <div id="card1" onmouseover="mostrar('murci')" onmouseout="ocultar('murci')"></div>
+        <p id="covid" onclick="ocultar('covid')" > No party for COVID</p>
+        <p id="card1" onmouseover="mostrar('murci')" onmouseout="ocultar('murci')"></p>
         <div id="card2" onclick="mostrar('susto');"></div>
-        <div id="card3" onclick="mostrar('mayas');sonar('demon')"></div>
+        <div id="card3" onclick="mostrar('mayas');sonar('demon');mostrar('covid')"></div>
         
         <img id="murci" src="imagenes/murci.gif">
         <img id="susto" src="imagenes/susto.gif" onclick="ocultar('susto')" height="1200">
         <img id="mayas" src="imagenes/mayas.gif" onclick="ocultar('mayas')">
-        <img id="freddy" src="imagenes/freddy.gif" onclick="ocultar('freddy')">
  
 
 
