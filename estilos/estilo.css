@@ -1,0 +1,83 @@
+@font-face {
+    font-family: halloween;
+    src: url('../fuentes/plasma-drip/plasdrip.ttf');
+}
+@font-face {
+    font-family: covid;
+    src: url('../fuentes/aurach/Aurach\ Bi.ttf');
+}
+#wrapper {
+    position: relative; /*el wrapper se mueve para centrarse*/
+    background-image: url("../imagenes/fondo3.jpg");
+    width: 1332px;
+    height: 850px;
+    margin:auto;
+    border-radius: 100px;
+    
+}
+body{background-color: #000000;}
+h1{position: absolute;/* lo que va dentro se mueve con el*/
+    font-family: halloween, cursive;color:#8E151E;
+    font-size: 8vh;
+    left: 20px;
+    top: 680px;
+
+}
+#p1{color: #8E151E;
+    position: absolute;
+    top: 650px;
+    font-size: 3vh;
+    left: 20px;
+    font-family: 'Piedra', cursive
+    }
+#card1{position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 160px;
+    left: 650px;
+    
+
+}
+
+#card2{position: absolute;
+width: 155px;
+height: 127px;
+top:340px;
+left:430px;
+
+}
+
+#card3{position:absolute;
+    width: 193px;
+    height: 139px;
+    top:400px;
+    left:100px;
+    
+    
+    }
+
+#murci{position: absolute;
+top:160px;
+left:1100px;
+visibility: hidden;
+}
+
+#susto{position: absolute;
+visibility: hidden;
+}
+
+#mayas{position: absolute;
+top:510px;
+left: 1080px;
+visibility: hidden;}
+
+#covid{position: absolute;
+top:100px;
+left: 400px ;
+visibility: hidden; 
+color: green;
+font-size: 10vh;
+font-family: covid;        
+}
+
+
